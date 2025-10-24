@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meteo România – Prognoză 7 zile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="icons/na.svg" as="image" type="image/svg+xml">
+</head>
+<body>
+<header class="container">
+    <h1>Meteo România</h1>
+    <p class="subtitle">Prognoză zilnică pe 7 zile</p>
+
+    <form id="search-form" autocomplete="off">
+        <label for="city-input"><input id="city-input" type="text" placeholder="Introdu un oraș (ex: București, Cluj-Napoca, Iași)" required /></label>
+        <button type="submit">Caută</button>
+    </form>
+</header>
+
+<main class="container">
+    <section id="status" aria-live="polite"></section>
+
+    <section id="summary" class="summary hidden">
+        <!-- populated by JS -->
+    </section>
+
+    <section id="cards" class="cards" aria-label="Prognoză pe zile"></section>
+</main>
+
+<footer class="container">
+</footer>
+
+<script src="app.js"></script>
+<script src="animation.js"></script>
+</body>
+</html>
